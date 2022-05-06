@@ -2,10 +2,10 @@ print("****************************************")
 print("  Bem vindo ao jogo de Adivinhação!!")
 print("****************************************")
 
-numero_secreto = 42
+numero_secreto = 42 ## Variaveis tem o tipo dinamico (ele atribiu através da inferência)
 chute_str = input("Digite o seu numero: ") ## A variavel do input recebe o valor digitado
 
-tipo = type(chute_str) ## O input devolve um string
+tipo = type(chute_str) ## No python 3 o input devolve um tipo string
 print("o tipo do input é:", tipo)
 
 chute_int = int(chute_str)  ## Podemos fazer o parse através do metodo int()
