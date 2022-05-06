@@ -1,7 +1,30 @@
-print("Bem vindo no jogo de Adivinhação")
+print("****************************************")
+print("  Bem vindo ao jogo de Adivinhação!!")
+print("****************************************")
 
-jogo = "Adivinhação"
+numero_secreto = 42
+chute_str = input("Digite o seu numero: ") ## A variavel do input recebe o valor digitado
 
-print("Do que é esse jogo?", jogo)
-print("Bem", "vindo", "no", "jogo", "de", jogo, sep="-")
+tipo = type(chute_str) ## O input devolve um string
+print("o tipo do input é:", tipo)
+
+chute_int = int(chute_str)  ## Podemos fazer o parse através do metodo int()
+
+# Poderiamos fazer assim também: chute = int(input("Digite o seu numero: "))
+
+print("Você digitou: ", chute_str)
+
+## Na linguagem python, para indicar que é um bloco de execucao usamos os :
+## Além disso, uma caracteristica importante da linguagem é a endentação, que espera 4 espaços
+if (numero_secreto == chute_int):
+    print("Você acertou!!")
+else:
+    print("Você errou!")
+
+
+
+
+
+
+
 
