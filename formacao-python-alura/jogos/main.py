@@ -34,7 +34,7 @@ print("R$ {:07d}".format(46))
 print("Data {:02d}/{:02d}".format(9,11))
 
 
-## List
+## List == estruturas de dados mutaveis
 inteiros = [1,2,4,6,7]
 print(inteiros)
 
@@ -51,7 +51,7 @@ print(inteiros[2])
 print(inteiros.__contains__(3))
 
 
-## Tuple
+## Tuple == estruturas de dados imutaveis
 
 palavras = ("banana", "maca", "uva")
 print(palavras)
@@ -71,6 +71,22 @@ print("Tuple map:", tupleMap)
 
 outraLista = list(tupleMap)
 print("Tupla convertida em lista:", outraLista)
+
+
+## Set == estrutura de dados não ordenada e que não aceita elementos duplicados
+
+colecao = {11122233344, 22233344455, 33344455566}
+print(colecao)
+
+colecao.add(55562562525)
+print(colecao)
+
+colecao.add(55562562525)
+print(colecao)
+
+
+
+
 
 
 
