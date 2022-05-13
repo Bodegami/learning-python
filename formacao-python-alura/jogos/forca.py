@@ -7,8 +7,6 @@ def jogar():
     palavra_secreta = "banana".upper()
     letras_acertadas = ["_" for letra in palavra_secreta] ## List Comprehensions
 
-
-
     enforcou = False
     acertou = False
     erros = 0

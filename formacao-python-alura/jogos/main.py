@@ -51,8 +51,20 @@ print(inteiros[2])
 print(inteiros.__contains__(3))
 
 texto = "Vai cavalo!"
-listaDinamica = ["?" for letra in texto]
+listaDinamica = [letra.upper() for letra in texto]
 print(listaDinamica)
+
+inteiros = [5,7,2,4,9]
+quadrados = [num*num for num in inteiros]
+print(quadrados)
+
+# for numero in inteiros:
+#     if numero % 2 == 0:
+#         pares.append(numero)
+
+inteiros = [1,3,4,5,7,8,9]
+pares = [numero for numero in inteiros if numero % 2 == 0] ## Massa d+ / codigo comentado em uma linha
+print(pares)
 
 
 ## Tuple == estruturas de dados imutaveis
@@ -87,6 +99,30 @@ print(colecao)
 
 colecao.add(55562562525)
 print(colecao)
+
+
+## Leitura e escritura de arquivos
+
+## O Python já nos entrega uma funcao built-in chamada "open()" para I/O
+## No primeiro parametro indicamos o nome e a extensao do arquivo,
+## No segundo parametro indicamos qual operacao queremos fazer. ex:
+## "a" -> append (incrementar um arquivo já existente)
+## "r" -> readOnly (apenas leitura)
+## "w" -> write (escrita) obs: caso o arquivo já exista, ele vai apagar e criar um novo somente com as novas informacoes
+## podemos passar um terceiro parametro que representa o enconding do nosso arquivo
+
+arquivo = open("palavras.txt", "w", encoding='UTF-8')
+print(arquivo)
+print(type(arquivo))
+
+arquivo.write("banana")
+arquivo.write("melancia")
+arquivo.close()
+
+arquivo = open("palavras.txt", "a", encoding='UTF-8')
+arquivo.write("morango\n")
+arquivo.write("maça\n")
+arquivo.close()
 
 
 
