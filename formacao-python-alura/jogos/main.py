@@ -50,6 +50,10 @@ print(inteiros[2])
 
 print(inteiros.__contains__(3))
 
+texto = "Vai cavalo!"
+listaDinamica = ["?" for letra in texto]
+print(listaDinamica)
+
 
 ## Tuple == estruturas de dados imutaveis
 
