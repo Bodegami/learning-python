@@ -33,3 +33,45 @@ print("R$ {:07.2f}".format(4.5))
 print("R$ {:07d}".format(46))
 print("Data {:02d}/{:02d}".format(9,11))
 
+
+## List
+inteiros = [1,2,4,6,7]
+print(inteiros)
+
+inteiros.append(9)
+print(inteiros)
+
+inteiros.pop()
+print(inteiros)
+
+print(inteiros.__getitem__(2))
+
+print(inteiros[2])
+
+print(inteiros.__contains__(3))
+
+
+## Tuple
+
+palavras = ("banana", "maca", "uva")
+print(palavras)
+
+print(palavras.__getitem__(2))
+
+print(palavras.__contains__("maca"))
+
+map1 = ("Nico", 39)
+map2 = ("Flavio", 37)
+
+listMap = [map1, map2]
+print("List map:", listMap)
+
+tupleMap = tuple(listMap)
+print("Tuple map:", tupleMap)
+
+outraLista = list(tupleMap)
+print("Tupla convertida em lista:", outraLista)
+
+
+
+
