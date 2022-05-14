@@ -115,14 +115,30 @@ arquivo = open("palavras.txt", "w", encoding='UTF-8')
 print(arquivo)
 print(type(arquivo))
 
-arquivo.write("banana")
-arquivo.write("melancia")
+arquivo.write("banana\n")
+arquivo.write("melancia\n")
 arquivo.close()
 
 arquivo = open("palavras.txt", "a", encoding='UTF-8')
 arquivo.write("morango\n")
 arquivo.write("maça\n")
 arquivo.close()
+
+arquivo = open("palavras.txt", "r", encoding='UTF-8')
+print(arquivo.read())
+print(arquivo.read()) ## O metodo read só o arquivo uma vez, para ler novamente é necessario abrir o arquivo de novo
+arquivo.close()
+
+arquivo = open("palavras.txt", "r", encoding='UTF-8')
+for linha in arquivo:
+    print(linha)
+arquivo.close()
+
+arquivo = open("palavras.txt", "r", encoding='UTF-8')
+linha = arquivo.readline()
+print(linha)
+print(linha.strip())
+
 
 
 

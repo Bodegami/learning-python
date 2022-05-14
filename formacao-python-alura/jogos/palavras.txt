@@ -1,2 +1,4 @@
-bananamelanciamorango
+banana
+melancia
+morango
 maça
