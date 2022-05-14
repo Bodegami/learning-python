@@ -138,6 +138,13 @@ arquivo = open("palavras.txt", "r", encoding='UTF-8')
 linha = arquivo.readline()
 print(linha)
 print(linha.strip())
+arquivo.close()
+
+arquivo = open("palavras.txt", "r", encoding='UTF-8')
+linha = arquivo.readline(4)
+print(linha)
+print(linha.strip())
+arquivo.close()
 
 
 
