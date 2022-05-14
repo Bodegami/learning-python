@@ -149,8 +149,3 @@ arquivo.close()
 
 
 
-
-
-
-
-
