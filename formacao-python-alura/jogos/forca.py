@@ -3,7 +3,7 @@ import random
 def jogar():
 
     imprime_mensagem_abertura()
-    palavra_secreta = carrega_palavra_secreta("carros.txt")
+    palavra_secreta = carrega_palavra_secreta(1,"carros.txt")
 
     letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
     print(letras_acertadas)
@@ -39,7 +39,7 @@ def imprime_mensagem_abertura():
     print("****************************************")
 
 
-def carrega_palavra_secreta(nome_arquivo="palavras.txt"):
+def carrega_palavra_secreta(primeira_linha_valida=0, nome_arquivo="palavras.txt"):
     arquivo = open(nome_arquivo, "r", encoding='UTF-8')
     palavras = []
 
@@ -49,7 +49,7 @@ def carrega_palavra_secreta(nome_arquivo="palavras.txt"):
 
     arquivo.close()
 
-    numero = random.randrange(0, len(palavras))
+    numero = random.randrange(primeira_linha_valida, len(palavras))
     palavra_secreta = palavras[numero]
     return palavra_secreta
 
