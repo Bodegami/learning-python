@@ -1,4 +1,12 @@
 
 
 class Conta:
-    pass
+
+    ## __init__ == construtor
+    ## self == this
+    def __init__(self, numero, titular, saldo, limite):
+        print("Construindo objeto ... {}".format(self))
+        self.numero = numero
+        self.titulo = titular
+        self.saldo = saldo
+        self.limite = limite

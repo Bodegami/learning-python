@@ -30,5 +30,6 @@ print(conta1)
 deposita(conta1, 15.0)
 extrato(conta1)
 
-print(Conta())
-conta2 = Conta()
+#print(Conta())
+conta2 = Conta(123, "Marco", 55.5, 1000.0)
+print(conta2)
