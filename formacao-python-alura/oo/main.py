@@ -16,12 +16,19 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 
+from conta import Conta
 
-conta = cria_conta(123, "Nico", 55.0, 1000.0)
-print(conta)
+## exemplo de dicionario
+teste = {"numero": 123, "titular": "Nico", "saldo": 55.0, "limite": 1000.0}
 
-saca(conta, 20.0)
-print(conta)
+conta1 = cria_conta(123, "Nico", 55.0, 1000.0)
+print(conta1)
 
-deposita(conta, 15.0)
-extrato(conta)
+saca(conta1, 20.0)
+print(conta1)
+
+deposita(conta1, 15.0)
+extrato(conta1)
+
+print(Conta())
+conta2 = Conta()
