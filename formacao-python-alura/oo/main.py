@@ -33,3 +33,11 @@ extrato(conta1)
 #print(Conta())
 conta2 = Conta(123, "Marco", 55.5, 1000.0)
 print(conta2)
+
+conta2.extrato()
+
+conta2.deposita(100)
+conta2.extrato()
+
+conta2.saca(50)
+conta2.extrato()
