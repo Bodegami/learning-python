@@ -51,3 +51,6 @@ conta3 = None
 print(type(conta3))
 
 conta4 = Conta(123,"Pedro", 78.9, 1000.0)
+conta4.transfere(10.0, conta2)
+conta4.extrato()
+conta2.extrato()
