@@ -24,6 +24,28 @@ class Conta:
         self.saca(valor)
         destino.deposita(valor)
 
+    @property
+    def numero(self):
+        return self._numero
+
+    @property
+    def titular(self):
+        return self._titular
+
+    @property
+    def saldo(self):
+        return self._saldo
+
+    @property
+    def limite(self):
+        return self._limite
+
+    @limite.setter
+    def limite(self, novo_limite):
+        self.__limite = novo_limite
+
+
+
     ## Uma classe deve ser coesa, ela deve seguir o principio de responsabilidade unica,
     ## logo, o metodo abaixo nao deveria fazer parte desta classe, pois o cliente pode ser inadimplente,
     ## mas a classe nao.

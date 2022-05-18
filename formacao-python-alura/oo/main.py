@@ -2,7 +2,8 @@
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+from cliente import Cliente
+from conta import Conta
 from teste import cria_conta, deposita, saca, extrato
 
 def print_hi(name):
@@ -54,3 +55,10 @@ conta4 = Conta(123,"Pedro", 78.9, 1000.0)
 conta4.transfere(10.0, conta2)
 conta4.extrato()
 conta2.extrato()
+
+cliente = Cliente("renato")
+# print(cliente.get_nome())
+print(cliente.nome)
+
+cliente.nome = "marco"
+print(cliente.nome)
