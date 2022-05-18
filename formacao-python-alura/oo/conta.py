@@ -23,3 +23,9 @@ class Conta:
     def transfere(self, valor, destino):
         self.saca(valor)
         destino.deposita(valor)
+
+    ## Uma classe deve ser coesa, ela deve seguir o principio de responsabilidade unica,
+    ## logo, o metodo abaixo nao deveria fazer parte desta classe, pois o cliente pode ser inadimplente,
+    ## mas a classe nao.
+    ##def en_inadimplente(self, cliente):
+
