@@ -49,3 +49,5 @@ print(type(conta3))
 ## O None no Python é o equivalente ao Null em Java
 conta3 = None
 print(type(conta3))
+
+conta4 = Conta(123,"Pedro", 78.9, 1000.0)
