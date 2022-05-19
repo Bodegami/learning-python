@@ -65,4 +65,9 @@ print(cliente.nome)
 
 conta4.saca(1400)
 
+# print(conta4.codigo_banco)
+print(Conta.codigo_banco())
 
+codigos = Conta.codigos_bancos()
+print(codigos)
+print(codigos['BB'])
