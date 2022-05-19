@@ -62,3 +62,7 @@ print(cliente.nome)
 
 cliente.nome = "marco"
 print(cliente.nome)
+
+conta4.saca(1400)
+
+
