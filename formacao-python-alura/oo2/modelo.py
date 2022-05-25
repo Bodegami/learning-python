@@ -19,8 +19,8 @@ class Programa:
     def nome(self, novo_nome):
         self._nome = novo_nome.title()
 
-    def imprime(self):
-        print(f'{self.nome} - {self.ano} - {self._likes} Likes')
+    def __str__(self):
+        return f'{self.nome} - {self.ano} - {self._likes} Likes'
 
 
 class Filme(Programa):
@@ -28,8 +28,8 @@ class Filme(Programa):
         super().__init__(nome, ano)
         self.duracao = duracao
 
-    def imprime(self):
-        print(f'{self.nome} - {self.ano} - {self.duracao} min - {self._likes} Likes')
+    def __str__(self):
+        return f'{self.nome} - {self.ano} - {self.duracao} min - {self._likes} Likes'
 
 
 class Serie(Programa):
@@ -37,8 +37,8 @@ class Serie(Programa):
         super().__init__(nome, ano)
         self.temporadas = temporadas
 
-    def imprime(self):
-        print(f'{self.nome} - {self.ano} - {self.temporadas} temporadas - {self._likes} Likes')
+    def __str__(self):
+        return f'{self.nome} - {self.ano} - {self.temporadas} temporadas - {self._likes} Likes'
 
 
 vingadores = Filme('vingadores - guerra infinita', 2018, 160)
@@ -53,8 +53,13 @@ atlanta.dar_like()
 filmes_e_series = [vingadores, atlanta]
 
 for programa in filmes_e_series:
-    programa.imprime()
+    print(programa)
 
 
-print(123434) ## por de baixo dos panos o Python transforma o objeto numa representacao textual (string)
-print(str(123434)) ## é exatamente o que python faz no codigo acima
+
+
+
+
+
+## print(123434) -> por de baixo dos panos o Python transforma o objeto numa representacao textual (string)
+## print(str(123434)) -> é exatamente o que python faz no codigo acima
