@@ -53,8 +53,7 @@ class Playlist:
     def listagem(self):
         return self._programas
 
-    @property
-    def tamanho(self):
+    def __len__(self):
         return len(self._programas)
 
 
@@ -75,13 +74,21 @@ filmes_e_series = [vingadores, atlanta, demolidor, tmep]
 
 playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
 
-print(f'Tamanho do playlist: {len(playlist_fim_de_semana.listagem)}')
+print(f'Tamanho do playlist: {len(playlist_fim_de_semana)}')
 
 for programa in playlist_fim_de_semana:
     print(programa)
 
 print(f'Tá ou não tá? {demolidor in playlist_fim_de_semana}')
 print(playlist_fim_de_semana[2])
+
+print(len(playlist_fim_de_semana))
+
+
+## Inicialização	__init__
+## Representação	__str__, __repr__
+## Container, sequência	__contains__, __iter__, __len__, __getitem__
+## Numéricos	__add__, __sub__, __mul__, __mod__
 
 ## print(123434) -> por de baixo dos panos o Python transforma o objeto numa representacao textual (string)
 ## print(str(123434)) -> é exatamente o que python faz no codigo acima
