@@ -13,8 +13,8 @@ class Caelum(Funcionario):
         print(f'Mostrando cursos - {mes}' if mes else 'Mostrando cursos desse mês')
 
 class Alura(Funcionario):
-    def mostrar_tarefas(self):
-        print('Fez muita coisa, Alurete!')
+    # def mostrar_tarefas(self):
+    #     print('Fez muita coisa, Alurete!')
 
     def busca_perguntas_sem_resposta(self):
         print('Mostrando perguntas não respondidas do fórum')
@@ -35,3 +35,9 @@ luan.busca_perguntas_sem_resposta()
 luan.busca_cursos_do_mes()
 
 luan.mostrar_tarefas()
+
+## MRO - Method Resolution Order
+## algoritmo usado para tomada de decisao interna do Python 3
+
+
+# Pleno -> Alura -> Caelum -> Funcionario
