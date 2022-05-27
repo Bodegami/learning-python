@@ -1,16 +1,33 @@
-# This is a sample Python script.
+## SOBRE CLASSES ABSTRATAS
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from abc import ABC # abstract base classes
+
+from collections.abc import MutableSequence
+# from numbers import Complex
+#
+# class Numero(Complex):
+#     def __getitem__(self, item):
+#         super().__getitem__()
+#
+# filmes = Numero()
+#
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# from collections.abc import Sized
+#
+# class MinhaListagem(Sized):
+#     def __init__(self, descricao):
+#         self.descricao = descricao
+#
+#     def __str__(self):
+#         return self.descricao
+#
+# lista = MinhaListagem()
+# print(lista)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+from abc import ABCMeta, abstractmethod
+class Programa(metaclass = ABCMeta):
+    @abstractmethod
+    def __str__(self):
+        pass
