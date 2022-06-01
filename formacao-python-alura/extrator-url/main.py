@@ -8,3 +8,8 @@ url_parametros = url[20:36]
 print(url_parametros)
 
 print(url)
+
+comida = 'fruta'
+comi = 'fruta'
+
+print(comida == comi)
