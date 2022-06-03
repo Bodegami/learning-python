@@ -1,6 +1,27 @@
 ## url = 'https://bytebank.com/cambio?moedaDestino=dolar&quantidade=100&moedaOrigem=real'
-url = 'https://bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar'
+# url = 'https://bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar'
+url = "    a      "
 print(url)
+
+# Sanitização da URL
+# replace() = o primeiro paramento é o que queremos remover e o segundo é o que queremos adicionar no lugar
+# url = url.replace(" ", "")
+
+# strip() = remove todos os espaços em brancos no inicio e no fim da string, remove caracteres especiais e etc
+# url = url.strip()
+
+# lstrip() = remove todos os espaços em branco a esquerda
+#url = url.lstrip()
+
+# rstrip() = remove todos os espaços em branco a direita
+#url = url.rstrip()
+
+
+url = url.strip()
+
+# Validação da URL
+if url == "":
+    raise ValueError("A URL está vazia")
 
 ## O fatiamento tem uma propriedade interessante que é omitir o parametro
 ## quando usado no inicio, ele pega o ponto inicial da string
