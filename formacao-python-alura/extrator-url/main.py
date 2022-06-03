@@ -1,3 +1,5 @@
+from extrator_url import ExtratorURL
+
 ## url = 'https://bytebank.com/cambio?moedaDestino=dolar&quantidade=100&moedaOrigem=real'
 # url = 'https://bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar'
 url = "    a      "
@@ -71,3 +73,8 @@ if indice_e_comercial == -1:
 else:
     valor = url_parametros[indice_valor:indice_e_comercial]
 print(valor)
+
+print("====================||Sobre o tipo especial NONE||======================")
+
+print(type(None))
+extrator = ExtratorURL("")
