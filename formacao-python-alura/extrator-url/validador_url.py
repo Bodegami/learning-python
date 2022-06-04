@@ -1,3 +1,5 @@
+# Documentation aboy regex: https://docs.python.org/pt-br/3/howto/regex.html#regex-howto
+
 '''
 Exemplos de URLs válidas:
 
@@ -17,6 +19,7 @@ https://bytebank.naoexiste/cambio
 ht://bytebank.naoexiste/cambio
 
 '''
+
 
 # https://www.bytebank.com.br/cambio
 
