@@ -48,6 +48,9 @@ class ExtratorURL:
     def __str__(self):
         return self.url + "\n" + "Parâmetros: " + self.get_url_parametros() + "\n" + "URL Base: " + self.get_url_base()
 
+    def __eq__(self, other):
+        return self.url == other.url
+
 
 url = 'https://bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar'
 extrator_url = ExtratorURL(url)
@@ -58,4 +61,21 @@ print(extrator_url)
 valor_quantidade = extrator_url.get_valor_parametro("quantidade")
 print(valor_quantidade)
 
-print(extrator_url == extrator_url2)
+print(extrator_url == extrator_url2) # extrator_url.__eq__(extrator_url2)
+
+# implementacao padrao do __eq__() utiliza o id()
+print(id(extrator_url))
+print(id(extrator_url2))
+print(extrator_url is extrator_url2)
+
+print("=====================||||=========================")
+# A metodo de comparacao utilizando o id() por de baixo dos panos, funciona muito bem p/ strings
+# mas para objetos já não funciona como esperado, pq dentro da linguagem Python, dois objetos
+# podem ser iguais, mas não idênticos
+
+string_teste = "Banana"
+string_teste2 = "Banana"
+print(id(string_teste))
+print(id(string_teste2))
+
+print(string_teste is string_teste2)
