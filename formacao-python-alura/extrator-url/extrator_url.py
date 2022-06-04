@@ -1,5 +1,6 @@
 import re
 
+
 class ExtratorURL:
     def __init__(self, url):
         self.url = self.sanitiza_url(url)
@@ -30,7 +31,7 @@ class ExtratorURL:
         url_parametros = self.url[indice_interrogacao + 1:]
         return url_parametros
 
-# Note que é possivel chamar um metodo da classe e depois fazer o fatiamento da String
+    # Note que é possivel chamar um metodo da classe e depois fazer o fatiamento da String
     def get_valor_parametro(self, parametro_busca):
         indice_parametro = self.get_url_parametros().find(parametro_busca)
         indice_valor = indice_parametro + len(parametro_busca) + 1
@@ -40,14 +41,21 @@ class ExtratorURL:
         else:
             valor = self.get_url_parametros()[indice_valor:indice_e_comercial]
         return valor
-    
+
     def __len__(self):
         return len(self.url)
 
+    def __str__(self):
+        return self.url + "\n" + "Parâmetros: " + self.get_url_parametros() + "\n" + "URL Base: " + self.get_url_base()
 
 
+url = 'https://bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar'
+extrator_url = ExtratorURL(url)
+extrator_url2 = ExtratorURL(url)
+print("O tamanho da URL: ", len(extrator_url))
+print(extrator_url)
 
-extrator_url = ExtratorURL('https://bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar')
 valor_quantidade = extrator_url.get_valor_parametro("quantidade")
-print(len(extrator_url))
 print(valor_quantidade)
+
+print(extrator_url == extrator_url2)

@@ -25,3 +25,7 @@ for data in lista:
         print("achou")
 
 
+## O metodo dir retorna todos os metodos do objeto passado como argumento
+print(dir(str))
+
+
