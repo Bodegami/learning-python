@@ -46,3 +46,62 @@ contas[0].deposita(200)
 print(conta_do_gui)
 print(contas[0])
 
+print("END!")
+
+print("==================Tuplas====================")
+
+
+# A tupla é imutavel
+
+
+def deposita_para_todas(contas):
+    for conta in contas:
+        conta.deposita(100)
+
+
+contas = [conta_do_gui, conta_da_dani]
+print(contas[0], contas[1])
+deposita_para_todas(contas)
+print(contas[0], contas[1])
+
+contas.insert(0, 76)
+print(contas[0], contas[1], contas[2])
+
+try:
+    deposita_para_todas(contas)
+    print(contas[0], contas[1], contas[2])
+except AttributeError as ae:
+    print("Error:", ae)
+
+# tupla - ela pode ter um numero indefinido de valores e variados tipos
+guilherme = ('Guilherme', 37, 1981)
+daniela = ('Daniela', 31, 1987)
+
+# Ela nao tem o .append()
+try:
+    guilherme.append(6754)
+except AttributeError as ae:
+    print("Error:", ae)
+
+# Representando a classe ContaCorrente como uma tupla
+conta_do_gui = (15, 1000)
+# conta_do_gui.deposita() ## variação OO
+
+print(conta_do_gui[1])
+try:
+    conta_do_gui[1] += 100
+    print(conta_do_gui[1])
+except TypeError as te:
+    print("Error:", te)
+
+
+def deposita(conta):  # variação "funcional" (separando o comportamento dos dados)
+    novo_saldo = conta[1] + 100
+    codigo = conta[0]
+    return (codigo, novo_saldo)
+
+
+conta_do_gui_atualizada = deposita(conta_do_gui)
+
+print(conta_do_gui)
+print(conta_do_gui_atualizada)
