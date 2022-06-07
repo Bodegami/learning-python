@@ -105,3 +105,41 @@ conta_do_gui_atualizada = deposita(conta_do_gui)
 
 print(conta_do_gui)
 print(conta_do_gui_atualizada)
+
+
+print("===============Trabalhando com listas de tuplas===================")
+# criando listas de tuplas
+# Note que criamos listas de tuplas, onde listas são mutaveis, mas tuplas são imutaveis
+# Podemos adicionar e remover elementos a lista, mas não conseguimos alterar as tuplas
+
+usuarios = [guilherme, daniela]
+print(usuarios)
+
+# adicionando um usuario
+paulo =('Paulo', 39, 1979)
+usuarios.append(paulo)
+print(usuarios)
+
+
+print("===============Trabalhando com tuplas de listas===================")
+
+# Note que agora a tupla não permite adicionar novos elementos, mas podemos alterar os valores de seus objetos
+# Obs: Não é comum utilizar as tuplas como listas
+
+conta_do_gui = ContaCorrente(15)
+conta_do_gui.deposita(500)
+conta_da_dani = ContaCorrente(234876)
+conta_da_dani.deposita(1000)
+
+contas = (conta_do_gui, conta_da_dani)
+print(contas)
+
+for conta in contas:
+    print(conta)
+
+contas[0].deposita(300)
+
+for conta in contas:
+    print(conta)
+
+
