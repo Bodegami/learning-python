@@ -57,3 +57,51 @@ except ValueError as ve:
     print(f'Error: {ve}')
 
 
+print("=======================|| Ordendo os valores de uma lista ||=========================")
+
+print(sorted(idades))
+print(sorted(usuarios))
+
+
+print("=======================|| Revertendo a ordem dos valores de uma lista ||=========================")
+
+# O reversed é um iteravel assim como o range e o enumerated
+print(reversed(idades))
+print(f'Lista padrao: {idades}')
+print(f'Lista reversa: {list(reversed(idades))}') # forçando a geração de valores
+
+
+print("=======================|| Revertendo e ordenando os valores de uma lista ||=========================")
+
+print(sorted(idades, reverse=True))
+
+
+print("=======================|| Sobre a mutabilidade da lista ||=========================")
+
+'''''
+    Note que fizemos diversas operações com a lista de idades e usuarios, mas nenhuma delas foi alterado.
+Isso foi pq ate o momento executamos açoes sobre a lista para pegar apenas um resultado. Mas agora vamos ver 
+metodos que podem alterar a propria lista. 
+'''''
+
+print("=======================|| Ordenando os valores na lista ||=========================")
+
+idads = [15, 87, 32, 65, 56, 32, 49, 37]
+print(idads)
+idads.sort()
+print(idads)
+
+print("=======================|| Revertendo os valores na lista ||=========================")
+
+idads = [15, 87, 32, 65, 56, 32, 49, 37]
+print(idads)
+idads.reverse()
+print(idads)
+
+
+print("=======================|| Revertendo e ordenando os valores na lista ||=========================")
+
+idads = [15, 87, 32, 65, 56, 32, 49, 37]
+print(idads)
+idads.sort(reverse=True)
+print(idads)
