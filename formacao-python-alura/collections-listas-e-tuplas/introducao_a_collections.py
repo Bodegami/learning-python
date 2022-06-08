@@ -104,43 +104,47 @@ def valida_idade(idade, limite):
 lista_legivel = [proximo_ano(idade) for idade in idades if valida_idade(idade, 21)]
 print(lista_legivel)
 
-
 # Exemplos de problemas por conta da mutabilidade da lista
 # Quando passamos um objeto mutavel como parametro de algum metodo, ocorre o risco desse objeto ser alterado,
 #  o que poderia ocasionar um erro. Por isso parte da comunidade defende o usa objetos imutaveis
 idades = [16, 21, 29, 56, 43]
 
+
 def faz_processamento_de_visualizacao(lista):
     print(len(lista))
     lista.append(13)
 
+
 faz_processamento_de_visualizacao(idades)
 print(idades)
+
 
 # Outro problema é quando definimos um valor padrao
 # Quando definimos um valor padrao, esse valor sera cacheado em algum lugar e depedendo da manipulacao
 # que ocorrer no metodo, o retorno pode nao ser o esperado
 # Veja no exemplo a abaixo que a lista vazia definida como padrao vai sendo incrementada  cada vez que ela é chamada
 
-def faz_processamento_de_visualizacao2(lista = []):
+def faz_processamento_de_visualizacao2(lista=[]):
     print(len(lista))
     lista.append(13)
+
 
 faz_processamento_de_visualizacao2()
 faz_processamento_de_visualizacao2()
 faz_processamento_de_visualizacao2()
+
 
 # Para corrigir o problema do metodo acima, o ideal é indicar que o valor de referencia é None
 # e depois fazemos um validacao dentro do metodo para o caso de receber None, instanciar uma nova lista
 # Dessa forma contarmos o problema de imutabilidade
 
-def faz_processamento_de_visualizacao3(lista = None):
+def faz_processamento_de_visualizacao3(lista=None):
     if lista is None:
         lista = list()
     print(len(lista))
     lista.append(13)
 
-faz_processamento_de_visualizacao3()
-faz_processamento_de_visualizacao3()
-faz_processamento_de_visualizacao3()
 
+faz_processamento_de_visualizacao3()
+faz_processamento_de_visualizacao3()
+faz_processamento_de_visualizacao3()
