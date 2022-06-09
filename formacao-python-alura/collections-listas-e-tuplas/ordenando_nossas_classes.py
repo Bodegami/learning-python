@@ -75,6 +75,7 @@ for conta in sorted(contas, key=attrgetter('_codigo')):
 print("\n===============|| Implementando a ordenacao natural na classe ContaSalario ||=================\n")
 print("\nImplementado metodo __lt__() == lessThan ou menor que")
 
+
 class ContaSalario:
 
     def __init__(self, codigo):
