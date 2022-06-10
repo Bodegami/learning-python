@@ -77,3 +77,29 @@ usuarios_machine_learning = {13, 23, 56, 42}
 # porem podemos utilizar o operador de ou (|) para atribuir duas listas há um set()
 usuarios_nos_dois_cursos = set(usuarios_data_science | usuarios_machine_learning)
 print(usuarios_nos_dois_cursos)
+
+
+print("\n======================|| Unindo dois conjuntos pegandos apenas os valores em comum ||======================\n")
+
+
+usuarios_dos_dois_cursos = set(usuarios_data_science & usuarios_machine_learning)
+print(usuarios_dos_dois_cursos)
+
+
+print("\n======================|| Pegando os valores de um set e subtraindo por outro set() ||======================\n")
+
+
+usuarios_data_science = {15, 23, 43, 56}
+usuarios_machine_learning = {13, 23, 56, 42}
+print(f'Usuarios do curso de data science: {usuarios_data_science}')
+print(f'Usuarios do curso de machine learning: {usuarios_machine_learning}')
+usuarios_que_n_fizeram_machine_learn = usuarios_data_science - usuarios_machine_learning
+print(f'Usuarios que nao fizeram machine learning: {usuarios_que_n_fizeram_machine_learn}')
+
+print(15 in usuarios_que_n_fizeram_machine_learn)
+
+
+print("\n===============|| Pegando o usuario que fez um dos cursos, mas ñ os dois / (ou exclusivo) ||===============\n")
+
+somente_usuarios_que_fizeram_um_dos_cursos = usuarios_data_science ^ usuarios_machine_learning
+print(somente_usuarios_que_fizeram_um_dos_cursos)
