@@ -103,3 +103,82 @@ print("\n===============|| Pegando o usuario que fez um dos cursos, mas ñ os do
 
 somente_usuarios_que_fizeram_um_dos_cursos = usuarios_data_science ^ usuarios_machine_learning
 print(somente_usuarios_que_fizeram_um_dos_cursos)
+
+
+print("\n===============|| Mudando conjuntos em tempo real ||===============\n")
+
+# Os conjuntos são mutaveis assim como as listas
+usuarios = {1, 5, 76, 34, 52, 13, 17}
+print(usuarios)
+print(len(usuarios))
+
+usuarios.add(765)
+print(usuarios)
+print(len(usuarios))
+
+usuarios.remove(5)
+print(usuarios)
+print(len(usuarios))
+
+
+print("\n===============|| Criando um conjunto imutavel (frozenset()) ||===============\n")
+
+frozen_usuarios = frozenset(usuarios)
+print(frozen_usuarios)
+print(len(frozen_usuarios))
+
+# O frozenset() nao aceita operacoes para adicionar/ remover elementos
+try:
+    frozen_usuarios.add(859)
+except AttributeError as ae:
+    print(f'Error: {ae}')
+
+
+print("\n===============|| Criando um conjunto de strings ||===============\n")
+
+meu_texto = 'Bem vindo meu nome é Renato eu gosto muito de nomes e tenho o meu cachorro e gosto muito de cachorro'
+
+conjunto_string = set(meu_texto.split())
+print(conjunto_string)
+
+
+print("\n===============|| Sobre o metodo intersection() ||===============\n")
+
+usuarios = {1, 5, 76, 34, 52, 13, 17}
+frozen_usuarios = frozenset(usuarios)
+print(frozen_usuarios)
+print(len(frozen_usuarios))
+
+usuarios_genericos = {1, 32, 52, 47}
+
+# Retorna os elementos em comun nos dois conjuntos
+usuarios_em_comum = frozen_usuarios.intersection(usuarios_genericos)
+print(usuarios_em_comum)
+
+
+print("\n===============|| Sobre o metodo difference() ||===============\n")
+
+usuarios = {1, 5, 76, 34, 52, 13, 17}
+frozen_usuarios = frozenset(usuarios)
+print(frozen_usuarios)
+print(len(frozen_usuarios))
+
+usuarios_genericos = {1, 32, 52, 47}
+
+# Retorna os elementos distintos do set frozen_usuarios comparado a outros
+usuarios_distintos_deste_set = frozen_usuarios.difference(usuarios_genericos)
+print(usuarios_distintos_deste_set)
+
+
+print("\n===============|| Sobre o metodo union() ||===============\n")
+
+usuarios = {1, 5, 76, 34, 52, 13, 17}
+frozen_usuarios = frozenset(usuarios)
+print(frozen_usuarios)
+print(len(frozen_usuarios))
+
+usuarios_genericos = {1, 32, 52, 47}
+
+# Cria um novo frozenset() com os usuarios dos dois conjuntos
+usuarios_dos_dois_conjuntos = frozen_usuarios.union(usuarios_genericos)
+print(usuarios_dos_dois_conjuntos)
