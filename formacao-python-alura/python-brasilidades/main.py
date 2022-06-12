@@ -13,7 +13,13 @@ print("=================|| Construcao da classe Cpf ||=====================")
 print("=================|| Construcao da classe Cnpj ||=====================")
 
 exemplo_cnpj = "35379838000112"
+exemplo_cpf = "32007832062"
 # cnpj = CNPJ()
 # print(cnpj.validate(exemplo_cnpj))
 tipo_documento = "cnpj"
 documento = CpfCnpj(exemplo_cnpj, tipo_documento)
+print(documento)
+
+tipo_documento = "cpf"
+documento = CpfCnpj(exemplo_cpf,tipo_documento)
+print(documento)
