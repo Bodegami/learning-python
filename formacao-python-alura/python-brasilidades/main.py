@@ -1,6 +1,13 @@
 from Cpf import Cpf
+from validate_docbr import CPF
 
-cpf = "15616987913"
-objeto_cpf = Cpf(cpf)
+cpf = CPF()
 
-print(objeto_cpf)
+print(cpf.validate("33696592803"))
+
+
+
+# cpf = "15616987913"
+# objeto_cpf = Cpf(cpf)
+#
+# print(objeto_cpf)
