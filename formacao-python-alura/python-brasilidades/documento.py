@@ -1,6 +1,9 @@
 from validate_docbr import CPF, CNPJ
 
 
+# Aqui fazemos uso design pattern Factory. Criamos a classe documento que é um factory responsavel
+# por validar o numero de caracteres do documentos e chamar a classe correta criando uma instancia da mesma
+
 class Documento:
 
     @staticmethod
