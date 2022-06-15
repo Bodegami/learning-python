@@ -1,3 +1,4 @@
+from acesso_cep import BuscaEndereco
 from datetime import datetime, timedelta
 from datasBr import DatasBr
 import re
@@ -8,7 +9,7 @@ from validate_docbr import CPF, CNPJ
 print("=================|| Construcao da classe Cpf ||=====================")
 # cpf = Cpf("11111111112")
 # print(cpf)
-
+#
 # cpf = "15616987913"
 # objeto_cpf = Cpf(cpf)
 #
@@ -190,3 +191,19 @@ hoje = DatasBr()
 print(hoje.tempo_cadastro())
 
 
+print("=================|| Criando a classe BuscaEndereco ||=====================")
+
+# Testando o metodo 'cep_e_valido' de nossa classe BuscaEndereco com um cep invalido
+# Ao passar um cep invalido, deve retornar o error: Cep Invalido
+cep = 2587014
+try:
+    objeto_cep = BuscaEndereco(cep)
+except ValueError as ve:
+    print(f'Error: {ve}')
+
+# Testando o metodo 'cep_e_valido' de nossa classe BuscaEndereco com um cep valido
+cep = 25870146
+objeto_cep = BuscaEndereco(cep)
+
+# Testando os metodos 'format_cep' e '__str__' da nossa classe BuscaEndereco
+print(objeto_cep)
