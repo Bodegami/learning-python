@@ -1,4 +1,5 @@
 import re
+from telefonesBr import TelefonesBr
 from documento import Documento, DocCnpj, DocCpf
 from validate_docbr import CPF, CNPJ
 
@@ -85,3 +86,21 @@ texto = "aaabbbcccc bodegami666@gmail.com.br humm"
 
 resposta = re.search(padrao, texto)
 print(resposta.group())
+
+# Criando um padrao para telefone
+
+padrao_molde = "(xx)aaaa-wwww"
+padrao = "[0-9]{2}[0-9]{4,5}[0-9]{4}"
+texto = "Eu gosto do numero 2126451234 e gosto também do 2136431234"
+
+# O metodo findall retorna uma lista com todos os padrões encontrados dentro do texto
+resposta = re.findall(padrao, texto)
+print(resposta)
+print(re.search(padrao, texto).group())
+
+
+print("=================|| Testando a classe TelefonesBr ||=====================")
+
+telefone = "551126481234"
+
+telefone_class = TelefonesBr(telefone)
