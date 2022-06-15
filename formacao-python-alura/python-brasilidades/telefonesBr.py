@@ -30,4 +30,3 @@ class TelefonesBr:
             resposta.group(4),
         )
         return numero_formatado
-    

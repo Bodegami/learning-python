@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+from datasBr import DatasBr
 import re
 from telefonesBr import TelefonesBr
 from documento import Documento, DocCnpj, DocCpf
@@ -131,3 +133,21 @@ print("=================|| Testando a mascara da classe TelefonesBr ||==========
 telefone = "551126481234"
 telefone_objeto = TelefonesBr(telefone)
 print(telefone_objeto)
+
+
+print("=================|| Sobre a lib datetime ||=====================")
+
+# retorna a data e hora atual
+print(datetime.today())
+
+# imprimindo a data e hora a partir da nossa classe
+cadastro = DatasBr()
+print(cadastro.momento_cadastro)
+
+# utilizando o metodo 'month' do datetime na nossa classe
+print(cadastro.mes_cadastro())
+
+# utilizando o metodo 'weekday' do datetime na nossa classe
+print(cadastro.dia_semana())
+
+
