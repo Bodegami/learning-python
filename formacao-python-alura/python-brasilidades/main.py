@@ -1,3 +1,4 @@
+import requests
 from acesso_cep import BuscaEndereco
 from datetime import datetime, timedelta
 from datasBr import DatasBr
@@ -207,3 +208,37 @@ objeto_cep = BuscaEndereco(cep)
 
 # Testando os metodos 'format_cep' e '__str__' da nossa classe BuscaEndereco
 print(objeto_cep)
+
+
+print("=================|| Consumindo a API do VIACEP ||=====================")
+
+# A lib requests, por padrao retorna o status code da requisicao feita
+r = requests.get("https://viacep.com.br/ws/01001000/json/")
+print(r)
+
+# Mas podemos tambem acessar o corpo do objeto de resposta chamando o metodo escolhido para serializacao
+# aqui no caso escolhemos o json()
+print(r.json())
+# Note que dessa forma ele retorna um dicionario assim como um json
+print(type(r.json()))
+
+# Podemos também pegar somente a representacao textual com o atributo 'text'
+print(r.text)
+# Já dessa forma ele retorna uma string
+print(type(r.text))
+
+
+print("=================|| Criando o metodo acessa_via_cep na nossa classe BuscaEndereco ||=====================")
+
+cep = "01001000"
+objeto_cep = BuscaEndereco(cep)
+a = objeto_cep.acessa_via_cep()
+
+print(a)
+
+# Note que o response retorna um objeto do tipo Response do pacote 'models' da lib requests
+print(type(a))
+
+# O __dir__ retorna todos os metodos que uma classe tem
+print(dir(a))
+
