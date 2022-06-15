@@ -151,3 +151,23 @@ print(cadastro.mes_cadastro())
 print(cadastro.dia_semana())
 
 
+print("=================|| Formatando o padrao de datas ||=====================")
+
+# Sem formatacao
+hoje = datetime.today()
+
+# Aplicando uma formatacao usando o metodo 'strftime'
+hoje_formatado = hoje.strftime("%d/%m/%Y %H:%M")
+
+print(hoje)
+print(hoje_formatado)
+
+# O tipo do objeto datetime
+print(type(hoje))
+
+# Aqui é importante falar que quando chamamos o metodo 'strftime', ele retona uma string ao inves de um objeto datetime
+print(type(hoje_formatado))
+
+# Testando a formatacao da data na nossa classe DatasBr
+hoje_classe_datasBr = DatasBr()
+print(hoje_classe_datasBr)
