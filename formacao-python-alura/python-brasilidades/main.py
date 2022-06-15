@@ -222,6 +222,9 @@ print(r.json())
 # Note que dessa forma ele retorna um dicionario assim como um json
 print(type(r.json()))
 
+# No formato json() podemos acessar apenas um elemento do dicionario
+print(f"Deve retornar apenas o logradouro: {r.json()['logradouro']}")
+
 # Podemos também pegar somente a representacao textual com o atributo 'text'
 print(r.text)
 # Já dessa forma ele retorna uma string
@@ -242,3 +245,11 @@ print(type(a))
 # O __dir__ retorna todos os metodos que uma classe tem
 print(dir(a))
 
+
+print("=================|| Validando os dados retornados do metodo acessa_via_cep ||=====================")
+
+cep = "01001000"
+objeto_cep = BuscaEndereco(cep)
+bairro, cidade, uf = objeto_cep.acessa_via_cep()
+
+print(f'Bairro: {bairro}, Cidade: {cidade}, UF: {uf}')

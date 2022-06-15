@@ -26,5 +26,8 @@ class BuscaEndereco:
         fomato_da_resposta = "json"
         url = f"https://viacep.com.br/ws/{self.cep}/{fomato_da_resposta}/"
         resposta = requests.get(url)
-        return resposta
+        dados = resposta.json()
+        return (
+            dados['bairro'], dados['localidade'], dados['uf']
+        )
 
