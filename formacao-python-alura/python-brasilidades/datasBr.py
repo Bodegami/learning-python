@@ -16,7 +16,7 @@ class DatasBr:
             "setembro", "outubro", "novembro", "dezembro"
         ]
         mes_cadastro = self.momento_cadastro.month - 1
-        return meses_do_ano[mes_cadastro]
+        return meses_do_ano[mes_cadastro].capitalize()
 
     def dia_semana(self):
         dias_da_semana = [
@@ -24,7 +24,7 @@ class DatasBr:
             "sexta", "sábado", "domingo"
         ]
         dia_semana = self.momento_cadastro.weekday()
-        return dias_da_semana[dia_semana]
+        return dias_da_semana[dia_semana].capitalize()
 
     def format_data(self):
         data_formatada = self.momento_cadastro.strftime("%d/%m/%Y %H:%M")

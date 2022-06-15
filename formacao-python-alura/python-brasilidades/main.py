@@ -253,3 +253,18 @@ objeto_cep = BuscaEndereco(cep)
 bairro, cidade, uf = objeto_cep.acessa_via_cep()
 
 print(f'Bairro: {bairro}, Cidade: {cidade}, UF: {uf}')
+
+
+'''
+O que aprendemos:
+
+- Buscar libs na plataforma do Pypi
+- Instalar pacotes utilizando o comando pip install {lib}
+- Validar documentos utilizando a lib validate_docbr
+- A utilizar o padrao Factory com python
+- Formatar telefones, documentos e etc utilizando a lib Re (REGEX)
+- Como trabalhar com datas utilizando a lib datetime e os seus modulos datetime e timedelta
+- Formatar um cep utilizando os metodos built-in da Str()
+- Consumir uma API do ViaCep
+- Formatar o objeto de resposta da API ViaCep
+'''
