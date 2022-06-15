@@ -171,3 +171,22 @@ print(type(hoje_formatado))
 # Testando a formatacao da data na nossa classe DatasBr
 hoje_classe_datasBr = DatasBr()
 print(hoje_classe_datasBr)
+
+
+print("=================|| Sobre o import timedelta da lib datetime ||=====================")
+
+hoje = datetime.today()
+
+# aqui utilizamos ele para acrescentar um dia a data de hoje
+amanha = datetime.today() + timedelta(days=1)
+
+# o timedelta suporta operacoes aritmeticas como soma, subtracao, multiplicacao e etc.
+print(amanha - hoje)
+
+
+print("=================|| Testando o metodo tempo_cadastro de nossa classe DatasBr ||=====================")
+
+hoje = DatasBr()
+print(hoje.tempo_cadastro())
+
+
