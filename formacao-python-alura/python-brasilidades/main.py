@@ -104,3 +104,30 @@ print("=================|| Testando a classe TelefonesBr ||=====================
 telefone = "551126481234"
 
 telefone_class = TelefonesBr(telefone)
+
+
+print("=================|| Definindo a mascara ||=====================")
+
+padrao = "([0-9]{2,3})([0-9]{2})([0-9]{4,5})([0-9]{4})"
+telefone = "551126481234"
+resposta = re.findall(padrao, telefone)
+print(resposta)
+
+# Utilizando o agrupamento no regex '()', podemos pegar apenas um grupo no metodo group() passando a posicao dele
+print(re.search(padrao, telefone).group(2))
+
+
+# Utilizando o depois do agrupamento '?' indicamos que ele é opcional
+padrao = "([0-9]{2,3})?([0-9]{2})?([0-9]{4,5})([0-9]{4})"
+telefone = "1126481234"
+print(re.search(padrao, telefone).group())
+
+telefone = "26481234"
+print(re.search(padrao, telefone).group())
+
+
+print("=================|| Testando a mascara da classe TelefonesBr ||=====================")
+
+telefone = "551126481234"
+telefone_objeto = TelefonesBr(telefone)
+print(telefone_objeto)
