@@ -1,0 +1,10 @@
+## Terminal tips ##
+
+pip venv venv == cria um ambiente virtual de desenvolvimento
+
+pip install lib==versao == instala a versao da lib informada
+
+pip freeze > requirements.txt == cria um arquivo com todas as dependencias do projeto (similar ao pom.xml)
+
+pytest -v == executa todos os testes da aplicação com logs detalhados
+
