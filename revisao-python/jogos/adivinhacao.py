@@ -6,7 +6,8 @@ numero_secreto = 42
 total_de_tentativas = 3
 rodada = 1
 
-while (rodada <= total_de_tentativas):
+#O range é exclusivo, ou seja, ele nao itera sobre o ultimo elemento (3), por isso adicionamos + 1
+for rodada in range(1, total_de_tentativas + 1):
     print("Tentativa {} de {}".format(rodada, total_de_tentativas))
 
     #O input alem de imprimir a frase, também recebe a entrada sempre como String
@@ -26,7 +27,5 @@ while (rodada <= total_de_tentativas):
             print("Você errou! O seu chute foi maior do que o número secreto.")
         elif(menor):
             print("Você errou! O seu chute foi menor do que o número secreto.")
-
-    rodada += 1
 
 print("Fim do jogo!")
