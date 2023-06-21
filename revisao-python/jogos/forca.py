@@ -40,8 +40,14 @@ def imprime_msg_abertura():
     print("*********************************")
 
 
-def carrega_palavra_secreta():
-    arquivo = open("palavras.txt", "r")
+# Podemos definir um parametro opcional, para isso indicamos o nome do parametro 'nome_arquivo' e em seguida
+# atribuimos um valor padrão (="palavras.txt") que será usado caso o parametro não seja informado na chamada do metodo
+# Note que da forma que implementamos, tanto o nome_arquivo e o primeira_linha_valida são parametros opcionais,
+# que podem ser enviados juntos, somente um ou nenhum.
+# Além disso, aqui usamos outro recuso que se chama parametros nomeados, que seja enviado os parametros na chamda
+# do metodo em qualquer ordem.
+def carrega_palavra_secreta(nome_arquivo="palavras.txt", primeira_linha_valida=1):
+    arquivo = open(nome_arquivo, "r")
     lista_palavras = []
 
     for linha in arquivo:
@@ -50,7 +56,7 @@ def carrega_palavra_secreta():
 
     arquivo.close()
 
-    numero = random.randrange(0, len(lista_palavras))
+    numero = random.randrange(primeira_linha_valida, len(lista_palavras))
     palavra_secreta = lista_palavras[numero]
     return palavra_secreta
 
