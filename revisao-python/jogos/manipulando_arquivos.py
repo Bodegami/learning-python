@@ -49,3 +49,10 @@ for linha in arquivo:
     print(linha.strip())
 
 arquivo.close()
+
+# Usando a sintaxe do 'with open' o python garante que caso ocorra algum erro ao tentar abrir o arquivo, esse
+# erro nao vai quebrar a aplicacao. Alem disso o python cuida de fechar o arquivo e nao precisamos mais chamar
+# o arquivo.close().
+with open("palavras.txt", "r") as arquivo:
+    for linha in arquivo:
+        print(linha.strip().upper())
