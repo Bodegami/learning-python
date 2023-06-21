@@ -1,24 +1,11 @@
 import random
 
+
 def jogar():
-    print("*********************************")
-    print("***Bem vindo no jogo de Forca!***")
-    print("*********************************")
 
-    arquivo = open("palavras.txt", "r")
-    lista_palavras = []
-
-    for linha in arquivo:
-        linha = linha.strip().upper()
-        lista_palavras.append(linha)
-
-    arquivo.close()
-
-    numero = random.randrange(0, len(lista_palavras))
-    palavra_secreta = lista_palavras[numero]
-
-    #List Comprehensions
-    letras_acertadas = ["_" for letra in palavra_secreta]
+    imprime_msg_abertura()
+    palavra_secreta = carrega_palavra_secreta()
+    letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
 
     enforcou = False
     acertou = False
@@ -51,6 +38,33 @@ def jogar():
 
     print("Fim do jogo!")
 
+
+def imprime_msg_abertura():
+    print("*********************************")
+    print("***Bem vindo no jogo de Forca!***")
+    print("*********************************")
+
+
+def carrega_palavra_secreta():
+    arquivo = open("palavras.txt", "r")
+    lista_palavras = []
+
+    for linha in arquivo:
+        linha = linha.strip().upper()
+        lista_palavras.append(linha)
+
+    arquivo.close()
+
+    numero = random.randrange(0, len(lista_palavras))
+    palavra_secreta = lista_palavras[numero]
+    return palavra_secreta
+
+
+def inicializa_letras_acertadas(palavra: str):
+    # List Comprehensions
+    # Para cada letra da palavra, gera uma sequencia de '_'
+    letras_acertadas = ["_" for letra in palavra]
+    return letras_acertadas
 
 if (__name__ == "__main__"):
     jogar()
