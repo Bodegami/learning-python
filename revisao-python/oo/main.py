@@ -26,11 +26,15 @@ extrato(conta)
 print("\n*************PARADIGMA ORIENTADO A OBJETO*****************\n")
 
 # guarda a referencia do objeto em memoria
+# construindo objeto com valores default
 conta = Conta()
+print(conta)
+
+# passando os valores no construtor
+conta = Conta(321, "Bode", 200.0, 2000.0)
 print(conta)
 
 
 
 if __name__ == '__main__':
-    print()
-
+    pass
