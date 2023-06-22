@@ -35,6 +35,14 @@ conta = Conta(321, "Bode", 200.0, 2000.0)
 print(conta)
 
 
+print("\n*************ACESSANDO ATRIBUTOS*****************\n")
+
+print(conta.titular)
+print(conta.limite)
+print(conta.saldo)
+print(conta.numero)
+
+
 
 if __name__ == '__main__':
     pass
