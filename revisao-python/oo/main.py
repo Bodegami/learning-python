@@ -1,6 +1,8 @@
 
 from teste import cria_conta, deposita, saca, extrato
+from conta import Conta
 
+print("*************PARADIGMA PROCEDURAL*****************\n")
 conta = cria_conta(123, "Renato", 55.0, 1000.0)
 print(conta)
 print(conta["saldo"])
@@ -11,14 +13,22 @@ extrato(conta)
 saca(conta, 20.0)
 extrato(conta)
 
+# Como no paradigma procedural nao obriga um contrato, é fácil inserir um código como o abaixo
 
-conta2 = cria_conta(321, 200.0)
-deposita(conta2, 200.0)
-extrato(conta2)
+# conta2 = cria_conta(321, 200.0)
+# deposita(conta2, 200.0)
+# extrato(conta2)
+
+# conta3 = cria_conta(titular="Nico", limite=1000.0)
+# deposita(conta3, 100.0)
 
 
-conta3 = cria_conta(titular="Nico", limite=1000.0)
-deposita(conta3, 100.0)
+print("\n*************PARADIGMA ORIENTADO A OBJETO*****************\n")
+
+# guarda a referencia do objeto em memoria
+conta = Conta()
+print(conta)
+
 
 
 if __name__ == '__main__':
