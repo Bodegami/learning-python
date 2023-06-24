@@ -74,6 +74,22 @@ print("\n*************ENCAPSULANDO ATRIBUTOS*****************\n")
 print(conta._Conta__saldo)
 
 
+print("\n*************ENCAPSULANDO METODOS*****************\n")
+
+
+conta.extrato()
+conta2.extrato()
+
+conta.transfere(-10.0, conta2)
+
+conta.extrato()
+conta2.extrato()
+
+
+
+
+
+
 
 
 

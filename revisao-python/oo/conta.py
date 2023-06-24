@@ -1,3 +1,5 @@
+import conta
+
 
 class Conta:
 
@@ -21,3 +23,13 @@ class Conta:
 
     def saca(self, valor):
         self.__saldo -= valor
+
+    def transfere(self, valor, destino):
+        if (not self.__valida_valor(valor)):
+            raise ArithmeticError("Insira um valor válido!")
+
+        self.saca(valor)
+        destino.deposita(valor)
+
+    def __valida_valor(self, valor):
+        return valor > 0
