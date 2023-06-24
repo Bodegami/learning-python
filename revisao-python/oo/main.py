@@ -110,6 +110,15 @@ cliente.nome = "paulo"
 print(cliente.nome)
 
 
+print("\n*************METODOS PRIVADOS*****************\n")
+
+conta.extrato()
+conta.saca(1200.0)
+
+conta.extrato()
+conta.saca(100.0)
+conta.extrato()
+
 
 print("\n*************FIM!*****************\n")
 

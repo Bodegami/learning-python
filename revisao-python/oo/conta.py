@@ -15,22 +15,23 @@ class Conta:
         self.__saldo = saldo
         self.__limite = limite
 
-    def __valida_valor(self, valor):
-        return valor > 0
-
     def extrato(self):
         print("Saldo de {} do titular {}".format(self.__saldo, self.__titular))
 
     def deposita(self, valor):
         self.__saldo += valor
 
+    def __pode_sacar(self, valor_a_sacar):
+        valor_disponivel_a_sacar = self.__saldo + self.__limite
+        return valor_a_sacar <= valor_disponivel_a_sacar
+
     def saca(self, valor):
-        self.__saldo -= valor
+        if (self.__pode_sacar(valor)):
+            self.__saldo -= valor
+        else:
+            print("O valor {} passou o limite".format(valor))
 
     def transfere(self, valor, destino):
-        if (not self.__valida_valor(valor)):
-            raise ArithmeticError("Insira um valor válido!")
-
         self.saca(valor)
         destino.deposita(valor)
 
@@ -49,7 +50,4 @@ class Conta:
     # setter com implementacao python
     @limite.setter
     def limite(self, limite):
-        if (not self.__valida_valor(limite)):
-            raise ArithmeticError("Insira um valor válido!")
-
         self.__limite = limite
