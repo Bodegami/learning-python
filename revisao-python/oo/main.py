@@ -120,6 +120,15 @@ conta.saca(100.0)
 conta.extrato()
 
 
+print("\n*************METODOS DE CLASSE/METODOS ESTATICOS*****************\n")
+# Metodos estaticos podem ser chamados pela classe 'Conta' ou pelo objeto 'conta'
+
+print(conta.codigo_banco())
+print(Conta.codigo_banco())
+
+print(conta.codigos_bancos())
+print(Conta.codigos_bancos())
+
 print("\n*************FIM!*****************\n")
 
 
