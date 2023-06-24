@@ -1,6 +1,7 @@
 
 from teste import cria_conta, deposita, saca, extrato
 from conta import Conta
+from cliente import Cliente
 
 print("*************PARADIGMA PROCEDURAL*****************\n")
 conta = cria_conta(123, "Renato", 55.0, 1000.0)
@@ -90,14 +91,23 @@ conta2.extrato()
 print("\n*************GETTERS AND SETTERS*****************\n")
 
 print(conta.get_saldo())
-print(conta2.get_limite())
+print(conta2.limite)
 print(conta2.get_titular())
 
-conta2.set_limite(10000.0)
+conta2.limite = 10000.0
 
-print(conta2.get_limite())
+print(conta2.limite)
 
 
+print("\n*************OUTRA SOLUCAO PARA GETTERS E SETTERS*****************\n")
+
+cliente = Cliente("marco")
+
+print(cliente.nome)
+
+cliente.nome = "paulo"
+
+print(cliente.nome)
 
 
 

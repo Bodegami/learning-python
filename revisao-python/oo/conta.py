@@ -34,16 +34,21 @@ class Conta:
         self.saca(valor)
         destino.deposita(valor)
 
+    # getter com implementacao tipo Java
     def get_saldo(self):
         return self.__saldo
 
     def get_titular(self):
         return self.__titular
 
-    def get_limite(self):
+    # getter com implementacao python
+    @property
+    def limite(self):
         return self.__limite
 
-    def set_limite(self, limite):
+    # setter com implementacao python
+    @limite.setter
+    def limite(self, limite):
         if (not self.__valida_valor(limite)):
             raise ArithmeticError("Insira um valor válido!")
 
