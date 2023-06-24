@@ -37,10 +37,10 @@ print(conta)
 
 print("\n*************ACESSANDO ATRIBUTOS*****************\n")
 
-print(conta.titular)
-print(conta.limite)
-print(conta.saldo)
-print(conta.numero)
+# print(conta.titular)
+# print(conta.limite)
+# print(conta.saldo)
+# print(conta.numero)
 
 
 print("\n*************ACESSANDO METODOS DA CLASSE*****************\n")
@@ -59,6 +59,20 @@ conta.extrato()
 
 conta2.saca(10.0)
 conta2.extrato()
+
+
+print("\n*************ENCAPSULANDO ATRIBUTOS*****************\n")
+
+# Quebra o código, pois fizemos o encapsulamento dos atributos
+# print(conta.titular)
+# print(conta.limite)
+# print(conta.saldo)
+# print(conta.numero)
+
+# Permite o acesso direto ao atributo, porem a sintaxe "_Conta__saldo" é um aviso do python que essa forma
+# de acesso é considera uma má prática.
+print(conta._Conta__saldo)
+
 
 
 
