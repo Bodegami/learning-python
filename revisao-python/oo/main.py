@@ -31,7 +31,7 @@ conta = Conta()
 print(conta)
 
 # passando os valores no construtor
-conta = Conta(321, "Bode", 200.0, 2000.0)
+conta2 = Conta(321, "Bode", 200.0, 2000.0)
 print(conta)
 
 
@@ -42,6 +42,28 @@ print(conta.limite)
 print(conta.saldo)
 print(conta.numero)
 
+
+print("\n*************ACESSANDO METODOS DA CLASSE*****************\n")
+
+conta.extrato()
+conta2.extrato()
+
+conta.deposita(15.0)
+conta.extrato()
+
+conta2.deposita(10.0)
+conta2.extrato()
+
+conta.saca(15.0)
+conta.extrato()
+
+conta2.saca(10.0)
+conta2.extrato()
+
+
+
+
+print("\n*************FIM!*****************\n")
 
 
 if __name__ == '__main__':
