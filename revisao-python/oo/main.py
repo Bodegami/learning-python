@@ -80,14 +80,22 @@ print("\n*************ENCAPSULANDO METODOS*****************\n")
 conta.extrato()
 conta2.extrato()
 
-conta.transfere(-10.0, conta2)
+# conta.transfere(-10.0, conta2)
+conta.transfere(10.0, conta2)
 
 conta.extrato()
 conta2.extrato()
 
 
+print("\n*************GETTERS AND SETTERS*****************\n")
 
+print(conta.get_saldo())
+print(conta2.get_limite())
+print(conta2.get_titular())
 
+conta2.set_limite(10000.0)
+
+print(conta2.get_limite())
 
 
 

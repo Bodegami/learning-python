@@ -15,6 +15,9 @@ class Conta:
         self.__saldo = saldo
         self.__limite = limite
 
+    def __valida_valor(self, valor):
+        return valor > 0
+
     def extrato(self):
         print("Saldo de {} do titular {}".format(self.__saldo, self.__titular))
 
@@ -31,5 +34,17 @@ class Conta:
         self.saca(valor)
         destino.deposita(valor)
 
-    def __valida_valor(self, valor):
-        return valor > 0
+    def get_saldo(self):
+        return self.__saldo
+
+    def get_titular(self):
+        return self.__titular
+
+    def get_limite(self):
+        return self.__limite
+
+    def set_limite(self, limite):
+        if (not self.__valida_valor(limite)):
+            raise ArithmeticError("Insira um valor válido!")
+
+        self.__limite = limite
