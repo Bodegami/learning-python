@@ -50,13 +50,11 @@ class Serie(Programa):
         return f'Nome: {self._nome} - Ano: {self.ano} - Temporadas: {self.temporadas} temporadas - {self._likes} likes'
 
 
-class Playlist:
+class Playlist(list):
     def __init__(self, nome, programas):
         self.nome = nome
-        self.programas = programas
+        super().__init__(programas)
 
-    def tamanho(self):
-        return len(self.programas)
 
 
 vingadores = Filme("vingadores - guerra infinita", 2018, 160)
@@ -79,10 +77,14 @@ atlanta.nome = 'atanda'
 print(f'{vingadores.nome} - {vingadores.duracao}: {vingadores.likes}')
 print("\n ===================================================\n")
 
+print(str(1234123))
+
 filmes_e_series = [vingadores, atlanta, demolidor, tmep]
 playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
 
-for programa in playlist_fim_de_semana.programas:
+for programa in playlist_fim_de_semana:
     print(programa)
 
-print(str(1234123))
+print(f'Tamanho do playlist: {len(playlist_fim_de_semana)}')
+
+print(f'Tá ou nãpo tá? {demolidor in playlist_fim_de_semana}')
