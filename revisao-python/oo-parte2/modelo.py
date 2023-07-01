@@ -3,6 +3,10 @@
 # _likes == modificador de acesso protected
 # likes = modificador de acesso public
 # super().__init__(nome, ano) === chama o construtor da classe mae
+
+# Exemplo de if ternario utilizando o hasattr (funciona como o contains do Java, passando o objeto e atributo):
+# detalhes = programa.duracao if hasattr(programa, 'duracao') else programa.temporadas
+
 class Programa:
     def __init__(self, nome, ano):
         self._nome = nome.title()
@@ -24,17 +28,26 @@ class Programa:
     def nome(self, novo_nome):
         self._nome = novo_nome.title()
 
+    def imprime(self):
+        print(f'Nome: {self._nome} - Ano: {self.ano} - {self._likes} likes')
+
 
 class Filme(Programa):
     def __init__(self, nome, ano, duracao):
         super().__init__(nome, ano)
         self.duracao = duracao
 
+    def imprime(self):
+        print(f'Nome: {self._nome} - Ano: {self.ano} - Duração: {self.duracao} min - {self._likes} likes')
+
 
 class Serie(Programa):
     def __init__(self, nome, ano, temporadas):
         super().__init__(nome, ano)
         self.temporadas = temporadas
+
+    def imprime(self):
+        print(f'Nome: {self._nome} - Ano: {self.ano} - Temporadas: {self.temporadas} temporadas - {self._likes} likes')
 
 
 vingadores = Filme("vingadores - guerra infinita", 2018, 160)
@@ -53,5 +66,6 @@ print("\n ===================================================\n")
 filmes_e_series = [vingadores, atlanta]
 
 for programa in filmes_e_series:
-    detalhes = programa.duracao if hasattr(programa, 'duracao') else programa.temporadas
-    print(f'{programa.nome} -- {detalhes} D -- {programa.likes}')
+    programa.imprime()
+
+print(str(1234123))
