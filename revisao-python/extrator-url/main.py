@@ -1,22 +1,22 @@
 
 # url = "http://bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&quantidade=100"
-url = "https://bytebank.com/cambio?moedaDestino=dolar&moedaOrigem=real"
-
+url = "https://bytebank.com/cambio?moedaDestino=dolar&quantidade=100&moedaOrigem=real"
 print(url)
 
+# Separa a base e os parametros
 indice_interrogacao = url.find('?')
-# Omitindo o primeito elemento, o python entende que deve pegar do inicio da String
 url_base = url[:indice_interrogacao]
-# print(url_base)
-
-# Omitindo o segundo elemento, o python entende que deve pegar os elementos ate o final da String
 url_parametros = url[indice_interrogacao+1:]
-# print(url_parametros)
+print(url_parametros)
 
-parametro_busca = 'moedaOrigem'
+# Busca o valor de um parametro
+parametro_busca = 'quantidade'
 indice_parametro = url_parametros.find(parametro_busca)
-# print(indice_parametro)
-
 indice_valor = indice_parametro + len(parametro_busca) + 1
-valor = url_parametros[indice_valor:]
+indice_e_comercial = url_parametros.find('&', indice_valor)
+if indice_e_comercial == -1:
+    valor = url_parametros[indice_valor:]
+else:
+    valor = url_parametros[indice_valor:indice_e_comercial]
+
 print(valor)
