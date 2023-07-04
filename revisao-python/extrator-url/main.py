@@ -1,11 +1,14 @@
 
 # url = "http://bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&quantidade=100"
-url = "bytebank.com/cambio?moedaOrigem=real"
+url = "https://bytebank.com/cambio?moedaOrigem=real"
 
 print(url)
 
-url_base = url[0:19]
+indice_interrogacao = url.find('?')
+# Omitindo o primeito elemento, o python entende que deve pegar do inicio da String
+url_base = url[:indice_interrogacao]
 print(url_base)
 
-url_parametros = url[20:36]
+# Omitindo o segundo elemento, o python entende que deve pegar os elementos ate o final da String
+url_parametros = url[indice_interrogacao+1:]
 print(url_parametros)
