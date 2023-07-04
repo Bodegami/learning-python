@@ -29,3 +29,7 @@ else:
     valor = url_parametros[indice_valor:indice_e_comercial]
 
 print(valor)
+
+
+
+
