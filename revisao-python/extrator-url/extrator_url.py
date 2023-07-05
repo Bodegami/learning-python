@@ -9,6 +9,9 @@ class ExtratorURL:
     def __len__(self):
         return len(self.url)
 
+    def __str__(self) -> str:
+        return self.url + "\nParâmetros: " + self.get_url_parametros() + "\nURL Base: " + self.get_url_base()
+
     def __sanitiza_url(self, url: str):
         if type(url) == str:
             return url.strip()
@@ -49,10 +52,15 @@ class ExtratorURL:
 
 url = "https://bytebank.com/cambio?moedaDestino=dolar&quantidade=100&moedaOrigem=real"
 extrator_url = ExtratorURL(url)
-print("O tamanho da URL: ", len(extrator_url))
+print("O tamanho da URL: ", len(extrator_url)) # implementando o metodo __len__()
 
 valor_quantidade = extrator_url.get_valor_parametro("quantidade")
 print(valor_quantidade)
 
 print("Quais os metodos/atributos da classe: ", dir(extrator_url))
 print("Quantos métodos/atributos tem a classe: ", len(dir(extrator_url)))
+
+print(extrator_url) # Implementando o metodo __str__()
+
+extrator_url2 = ExtratorURL(url)
+print(extrator_url == extrator_url2)
