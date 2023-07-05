@@ -21,6 +21,8 @@ print(idades[4])
 for idade in idades:
     print(idade)
 
+result = [print("Idade: ", idade) for idade in idades]
+
 idades.append(27) # Adiciona um elemento no final da lista
 
 print(idades)
@@ -32,3 +34,5 @@ print(idades)
 idades.clear() # Remove todos elementos da lista
 
 print(idades)
+
+
