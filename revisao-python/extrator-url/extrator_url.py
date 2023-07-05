@@ -12,6 +12,9 @@ class ExtratorURL:
     def __str__(self) -> str:
         return self.url + "\nParâmetros: " + self.get_url_parametros() + "\nURL Base: " + self.get_url_base()
 
+    def __eq__(self, other):
+        return self.url == other.url
+
     def __sanitiza_url(self, url: str):
         if type(url) == str:
             return url.strip()
@@ -63,4 +66,7 @@ print("Quantos métodos/atributos tem a classe: ", len(dir(extrator_url)))
 print(extrator_url) # Implementando o metodo __str__()
 
 extrator_url2 = ExtratorURL(url)
-print(extrator_url == extrator_url2)
+print(extrator_url == extrator_url2) # Implementando o metodo __eq__()
+
+print(id(extrator_url)) # O metodo id() retorna o numero que representa o endereco de memoria do objeto
+print(id(extrator_url) == id(extrator_url2))
