@@ -53,3 +53,6 @@ print("O tamanho da URL: ", len(extrator_url))
 
 valor_quantidade = extrator_url.get_valor_parametro("quantidade")
 print(valor_quantidade)
+
+print("Quais os metodos/atributos da classe: ", dir(extrator_url))
+print("Quantos métodos/atributos tem a classe: ", len(dir(extrator_url)))
