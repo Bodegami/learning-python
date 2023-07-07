@@ -1,5 +1,6 @@
 from operator import attrgetter
 
+
 class ContaSalario:
 
     def __init__(self, codigo):
