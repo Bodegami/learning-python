@@ -12,3 +12,4 @@ print(sorted(idades))
 print(list(reversed(idades)))
 
 print(sorted(idades, reverse=True))
+
