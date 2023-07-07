@@ -1,3 +1,5 @@
+from operator import attrgetter
+
 
 class ContaSalario:
 
@@ -36,6 +38,22 @@ contas = [conta_gui, conta_dani, conta_paulo]
 print(conta_gui < conta_dani)
 
 for conta in sorted(contas, reverse=True):
+    print(conta)
+
+
+conta_gui = ContaSalario(1700)
+conta_gui.deposita(500)
+
+conta_dani = ContaSalario(3)
+conta_dani.deposita(500)
+
+conta_paulo = ContaSalario(133)
+conta_paulo.deposita(500)
+
+contas = [conta_gui, conta_dani, conta_paulo]
+
+# primeiro ordena pelo saldo, depois pelo codigo. O attrGetter permite um ou mais atributos para melhorar a ordenacao
+for conta in sorted(contas, key=attrgetter('_saldo', '_codigo')):
     print(conta)
 
     
