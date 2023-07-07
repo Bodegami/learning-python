@@ -30,7 +30,7 @@ for usuario in usuarios:
 # desempacotando a tupla e imprimindo apenas o nome
 for nome, idade, nascimento in usuarios:
     print(nome)
-    
+
 # desempacotando a tupla e imprimindo o nome e ignorando os outros elementos
 for nome, _, _ in usuarios:
     print(nome)
