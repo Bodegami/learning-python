@@ -31,3 +31,20 @@ usuarios_machine_learning = {13, 23, 56, 42}
 assistiram = usuarios_data_science | usuarios_machine_learning
 print(assistiram)
 
+# A operacao abaixo retorna apenas os elementos existentes nos dois conjuntos
+assistiram = usuarios_data_science & usuarios_machine_learning
+print(assistiram)
+
+# A operacao abaixo retorna apenas os elementos que estao no primeiro set e nao estão no segundo
+assistiram = usuarios_data_science - usuarios_machine_learning
+print(assistiram)
+
+
+print(15 in usuarios_data_science | usuarios_machine_learning)
+
+
+# A operacao abaixo é o OU Exclusivo (retorna os usuarios que não fizeram machine_learning e os usuarios que não fizaram
+# data_science
+assistiram = usuarios_data_science ^ usuarios_machine_learning
+print(assistiram)
+
