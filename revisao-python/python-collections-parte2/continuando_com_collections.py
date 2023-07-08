@@ -48,3 +48,29 @@ print(15 in usuarios_data_science | usuarios_machine_learning)
 assistiram = usuarios_data_science ^ usuarios_machine_learning
 print(assistiram)
 
+
+usuarios = {1,5,76,34,52,13,17}
+print(usuarios)
+print(len(usuarios))
+
+usuarios.add(13)
+print(usuarios)
+print(len(usuarios))
+
+# O set não possui ordem e nem index para acessar elementos. Ele é um conjunto
+usuarios.add(765)
+print(usuarios)
+print(len(usuarios))
+
+# O set por padrao é mutavel. Podemos adicionar e remover elementos
+print(type(usuarios))
+
+# Já o frozenset é imutavel e não permite adicionar e remover elementos
+usuarios_congelados = frozenset(usuarios)
+print(type(usuarios_congelados))
+
+
+meu_texto = "Bem vindo meu no é XPTO eu gosto muito de nomes e tenho o meu cachorro"
+meu_texto = set(meu_texto.split())
+print(meu_texto)
+
