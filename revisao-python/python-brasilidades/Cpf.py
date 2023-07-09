@@ -1,3 +1,6 @@
+from validate_docbr import CPF
+
+
 class Cpf:
 
     def __init__(self, documento):
@@ -12,16 +15,14 @@ class Cpf:
 
     def cpf_eh_valido(self, documento):
         if len(documento) == 11:
-            return True
+            validador = CPF()
+            return validador.validate(documento)
         else:
-            return False
+            raise ValueError("Quantidade de digitos inválida!!")
 
     def format_cpf(self):
-        fatia_um = self.documento[:3]
-        fatia_dois = self.documento[3:6]
-        fatia_tres = self.documento[6:9]
-        fatia_quatro = self.documento[9:11]
-        return f'{fatia_um}.{fatia_dois}.{fatia_tres}-{fatia_quatro}'
+        mascara = CPF()
+        return mascara.mask(self.documento)
 
 
 

@@ -1,12 +1,11 @@
 from Cpf import Cpf
 from validate_docbr import CPF
 
-cpf = str(15616957801)
+cpf = str(83977647040)
 
-# novo_cpf = Cpf(cpf)
-# print(novo_cpf)
+novo_cpf = Cpf(cpf)
+print(novo_cpf)
 
-validador = CPF()
-print(validador.validate(cpf))
+
 
 
