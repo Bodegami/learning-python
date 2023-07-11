@@ -27,3 +27,6 @@ hoje_formatado = hoje.strftime("%d/%m/%Y %H:%M")
 
 print(hoje)
 print(hoje_formatado)
+
+amanha = datetime.today() + timedelta(days=1, hours=20)
+print(amanha - hoje)

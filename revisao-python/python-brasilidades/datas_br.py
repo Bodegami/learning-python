@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class DatasBr:
@@ -23,6 +23,11 @@ class DatasBr:
         dia_cadastro = self.momento_cadastro.weekday()
         print(dia_cadastro)
         return dias_da_semana[dia_cadastro]
+
+    def tempo_cadastro(self):
+        # simulando data no futuro
+        tempo_cadastro = (datetime.today() + timedelta(days=30)) - self.momento_cadastro
+        return tempo_cadastro
 
     def format_data(self):
         return self.momento_cadastro.strftime("%d/%m/%Y %H:%M")

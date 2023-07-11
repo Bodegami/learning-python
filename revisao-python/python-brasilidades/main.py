@@ -23,6 +23,7 @@ cadastro = DatasBr()
 print(cadastro)
 print(cadastro.mes_cadastro())
 print(cadastro.dia_cadastro())
+print(cadastro.tempo_cadastro())
 
 
 
