@@ -10,4 +10,17 @@ print(r.text)
 cep = "01001000"
 
 objeto_cep = BuscaEndereco(cep)
-print(objeto_cep.acessa_viacep().text)
+viacep_response = objeto_cep.acessa_viacep()
+print(viacep_response)
+
+
+#print(type(viacep_response.text))
+#print(type(viacep_response.json()))
+
+#print(viacep_response.text)
+#print(viacep_response.json())
+
+#print(viacep_response.json()['bairro'])
+
+bairro, estado, cidade = objeto_cep.acessa_viacep()
+print(f'Bairro: {bairro}, Cidade: {cidade}, Estado: {estado}')
