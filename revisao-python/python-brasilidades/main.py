@@ -1,4 +1,5 @@
 from cpf_cnpj import CpfCnpj, Documento
+from telefones_br import TelefonesBr
 
 cpf = str(83977647040)
 # novo_cpf = CpfCnpj(cpf, "cpf")
@@ -14,6 +15,8 @@ print(documento)
 documento = Documento.cria_documento(cpf)
 print(documento)
 
+telefone = TelefonesBr("5511987654321")
+print(telefone)
 
 
 
