@@ -12,3 +12,13 @@ class TestClass:
         resultado = funcionario_teste.idade() # when (ação)
 
         assert resultado == esperado # then (desfecho)
+
+    def test_quando_sobrenome_recebe_Lucas_Carvalho_deve_retornar_Carvalho(self):
+
+        entrada = ' Lucas Carvalho '
+        esperado = 'Carvalho'
+        funcionario_teste = Funcionario(nome=entrada, data_nascimento='13/03/2000', salario=1111)
+
+        resultado = funcionario_teste.sobrenome()
+
+        assert resultado == esperado
