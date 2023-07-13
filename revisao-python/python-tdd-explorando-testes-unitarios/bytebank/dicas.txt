@@ -13,4 +13,8 @@ Criando um package no python:
 - Dentro do diretorio, criamos um arquivo ".py" com o nome "__init__"
 - Este arquivo pode ficar vazio
 
+Criando um arquivo de test:
+- Criar um arquivo ".py" e que o nome comece com "test_"
+- No arquivo criar a classe, mas os metodos devem começar com a assinatura "test_" para serem reconhecidos pelo pytest
+
 
