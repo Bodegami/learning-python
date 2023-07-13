@@ -1,3 +1,16 @@
 Instânciando um ambiente virtual:
 - Na raiz do projeto, abrir e executar no terminal: python3 -m venv venv
 - Após criar o ambinete virual, precisamos ativa-lo com o comando: source venv/bin/activate
+
+Instalando o pyTest:
+- Abrir o terminar e executar o comando: pip install pytest==7.1.2
+
+Criando um arquivo com todas as dependencias do projeto:
+- Abrir o terminal e executar: pip freeze > requirements.txt
+
+Criando um package no python:
+- Criamos um novo diretorio
+- Dentro do diretorio, criamos um arquivo ".py" com o nome "__init__"
+- Este arquivo pode ficar vazio
+
+
