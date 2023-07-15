@@ -19,3 +19,6 @@ Criando um arquivo de test:
 
 Executando a cobertura de testes:
 - Abrir o terminal e executar: pytest --cov=codigo tests/
+
+Exibindo linhas fora da cobertura:
+- Abrir o terminal e executar: pytest --cov=codigo tests/ --cov-report term-missing
