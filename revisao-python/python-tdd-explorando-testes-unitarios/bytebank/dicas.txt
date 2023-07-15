@@ -22,3 +22,13 @@ Executando a cobertura de testes:
 
 Exibindo linhas fora da cobertura:
 - Abrir o terminal e executar: pytest --cov=codigo tests/ --cov-report term-missing
+
+Gerando um relatorio em html:
+- Abrir o terminal e executar: pytes --cov=codigo tests/ --cov-report html
+
+Excluindo linhas da cobertura:
+- Na raiz do projeto, criamos um arquivo chamado ".coveragerc"
+- Este arquivo deve possuir uma tag "[run]"
+- Logo abaixo adicionamos a tag "[report]"
+- Abaixo de [report], colocamos a tag "exclude_lines ="
+- Na linha de baixo indicamos o nome do metodo que deve ser excluido da cobertura
