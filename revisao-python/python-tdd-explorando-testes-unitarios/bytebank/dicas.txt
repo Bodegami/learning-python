@@ -17,4 +17,5 @@ Criando um arquivo de test:
 - Criar um arquivo ".py" e que o nome comece com "test_"
 - No arquivo criar a classe, mas os metodos devem começar com a assinatura "test_" para serem reconhecidos pelo pytest
 
-
+Executando a cobertura de testes:
+- Abrir o terminal e executar: pytest --cov=codigo tests/
