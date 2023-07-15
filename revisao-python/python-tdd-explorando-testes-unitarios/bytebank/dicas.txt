@@ -23,8 +23,14 @@ Executando a cobertura de testes:
 Exibindo linhas fora da cobertura:
 - Abrir o terminal e executar: pytest --cov=codigo tests/ --cov-report term-missing
 
-Gerando um relatorio em html:
-- Abrir o terminal e executar: pytes --cov=codigo tests/ --cov-report html
+Gerando um relatorio da cobertura em html:
+- Abrir o terminal e executar: pytest --cov=codigo tests/ --cov-report html
+
+Gerando um relatorio da cobertura em xml:
+- Abrir o terminal e executar: pytest --cov=codigo tests/ --cov-report xml
+
+Gerando um relatorio dos testes em xml:
+- Abrir o terminal e executar: pytest --junitxml report.xml
 
 Excluindo linhas da cobertura:
 - Na raiz do projeto, criamos um arquivo chamado ".coveragerc"
