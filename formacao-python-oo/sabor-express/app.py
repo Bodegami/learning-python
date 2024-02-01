@@ -12,16 +12,29 @@ def exibir_nome_do_programa():
 """)
 
 def exibir_opcoes():
+   """Essa função é responsável por exibir as opções"""
    print('1. Cadastrar restaurante')
    print('2. Listar restaurante')
    print('3. Alternar estado do restaurante')
    print('4. Sair\n')
 
 def opcao_invalida():
+    """Essa função é responsável por retornar um erro"""
     print('Opção Inválida!')
     voltar_ao_menu_principal()
 
 def cadastrar_novo_restaurante():
+    '''
+    Essa função é responsável por cadastrar um novo restaurante
+    
+    Inputs:
+    - Nome do restaurante
+    - Categoria
+
+    Outputs:
+    - Adiciona um novo restaurante a lista de restaurantes
+    
+    '''
     exibir_subtitulo('Cadastro de novos restaurantes')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
     categoria_do_restaurante = input(f'Digite a categoria do restaurante {nome_do_restaurante}: ')
@@ -33,6 +46,13 @@ def cadastrar_novo_restaurante():
     voltar_ao_menu_principal()
 
 def listar_restaurantes():
+    '''
+    Essa função é responsável por listar todos os restaurantes
+    
+    Outputs:
+    - Exibe a lista de todos os restaurantes
+
+    '''
     exibir_subtitulo('Listando os restaurantes:')
     cabecalho = f'{"Nome do restaurante".ljust(22)} | {"Categoria".ljust(20)} | Status'
     print(cabecalho)
@@ -43,6 +63,16 @@ def listar_restaurantes():
     voltar_ao_menu_principal()
 
 def alternar_estado_restaurante():
+    '''
+    Essa função é responsável por alterar o estado de um restaurante
+    
+    Inputs:
+    - Nome do restaurante
+
+    Outputs:
+    - Altera o estado do restaurante
+
+    '''
     exibir_subtitulo('Alternando o estado do restaurante:')   
 
     nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
@@ -62,6 +92,7 @@ def alternar_estado_restaurante():
     voltar_ao_menu_principal()
 
 def escolher_opcao():
+    """Essa função é responsável por escolher a opção e invocar a mesma"""
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
         # O Retorno da funcao input() sempre é do tipo str
@@ -94,13 +125,16 @@ def escolher_opcao():
         opcao_invalida()                 
 
 def finalizar_app():
+    """Essa função é responsável por finalizar o app"""
     exibir_subtitulo('Finalizando o app!') 
 
 def voltar_ao_menu_principal():
+    """Essa função é responsável por voltar ao menu principal"""
     input('Digite um tecla para voltar ao menu principal ')
     main()
 
 def exibir_subtitulo(texto: str):
+    """Essa função é responsável por exibir o subtitulo"""
     os.system('cls')
     linha = '*' * (len(texto))
     print(linha)
