@@ -14,7 +14,7 @@ def exibir_nome_do_programa():
 def exibir_opcoes():
    print('1. Cadastrar restaurante')
    print('2. Listar restaurante')
-   print('3. Ativar restaurante')
+   print('3. Alternar estado do restaurante')
    print('4. Sair\n')
 
 def opcao_invalida():
@@ -34,8 +34,12 @@ def cadastrar_novo_restaurante():
 
 def listar_restaurantes():
     exibir_subtitulo('Listando os restaurantes:')
+    cabecalho = f'{"Nome do restaurante".ljust(22)} | {"Categoria".ljust(20)} | Status'
+    print(cabecalho)
+    print('_' * (len(cabecalho)))
     for restaurante in restaurantes:
-        print(f'- {restaurante["nome"]} | {restaurante["categoria"]} | {restaurante["ativo"]}')            
+        estado_restaurante = "ativado" if restaurante["ativo"] else "desativado" # exemplo de if ternario, primeiro passamos o valor caso verdadeiro, condicao e else
+        print(f'- {restaurante["nome"].ljust(20)} | {restaurante["categoria"].ljust(20)} | {estado_restaurante}')            
     voltar_ao_menu_principal()
 
 def alternar_estado_restaurante():
@@ -98,7 +102,11 @@ def voltar_ao_menu_principal():
 
 def exibir_subtitulo(texto: str):
     os.system('cls')
-    print(f'{texto}\n')        
+    linha = '*' * (len(texto))
+    print(linha)
+    print(f'{texto}')        
+    print(linha)
+    print()    
 
 def main():
     os.system('cls')
