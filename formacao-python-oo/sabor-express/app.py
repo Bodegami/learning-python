@@ -32,7 +32,6 @@ def listar_restaurantes():
         print(f'.{restaurante}')            
     voltar_ao_menu_principal()
         
-
 def escolher_opcao():
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
@@ -64,7 +63,6 @@ def escolher_opcao():
                 opcao_invalida()
     except:
         opcao_invalida()                 
-
 
 def finalizar_app():
     exibir_subtitulo('Finalizando o app!') 
