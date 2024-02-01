@@ -21,15 +21,27 @@ def escolher_opcao():
 
     print(f'Você escolheu a opção: {opcao_escolhida}')
 
+#    if opcao_escolhida == 1:
+#       print('Cadastrar restaurante')
+#    elif opcao_escolhida == 2:
+#       print('Listar restaurante')
+#    elif opcao_escolhida == 3:
+#       print('Ativar restaurante')
+#    else:
+#       finalizar_app() 
 
-    if opcao_escolhida == 1:
-       print('Cadastrar restaurante')
-    elif opcao_escolhida == 2:
-       print('Listar restaurante')
-    elif opcao_escolhida == 3:
-       print('Ativar restaurante')
-    else:
-       finalizar_app() 
+    match opcao_escolhida:
+        case 1:
+             print('Cadastrar restaurante')
+        case 2:
+             print('Listar restaurante')
+        case 3:
+             print('Ativar restaurante')                          
+        case 4:
+             finalizar_app()
+        case _:
+             print('Opção inválida!')             
+
 
 def finalizar_app():
     os.system('cls')
