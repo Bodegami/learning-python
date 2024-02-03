@@ -37,3 +37,20 @@ cmd: pip freeze
 7 - Para criar um arquivo com todos pacotes do modulo do projeto, no terminal
     executamos o seguinte comando:
 cmd: pip freeze > requirements.txt
+
+
+8 - Para instalar o Fast-api, no terminal execute o seguinte comando:
+cmd: pip install fastapi
+
+
+9 - Para instalar o uvicorn, no terminal execute o seguinte comando:
+cmd: pip install uvicorn
+
+
+10 - Para instalar os pacotes a partir do arquivo de requirements.txt, no terminal
+     execute o seguinte comando:
+cmd: pip install -r /path/to/requirements.txt
+
+
+11 - Para iniciar um servidor uvicorn, no terminal execute o seguinte comando:
+cmd: uvicorn main:app --reload
