@@ -1,0 +1,16 @@
+
+1 - Primeiro no terminal executamos o comando para criar um ambiente virtual, 
+    onde o '-m' representa a execucao de um script, 'venv' o representa o script 
+    de criacao de ambiente que queremos executar e por ultimo 'exemplo' que representa
+    o nome desse nosso ambiente virtual.
+    Uma boa pratica é utilizar o nome venv para o ambiente virtual:
+cmd: python -m venv exemplo
+
+
+2 - Para ativar o ambiente virtual, no terminal executamos um comando apontando para o arquivo
+    .bat que está no diretório Scripts:
+cmd: venv\Scripts\activate.bat    - WINDOWS
+terminal: source venv/bin/activate       - MAC
+
+3 - Para desativar o ambiente virtual, no terminal executamos um comando:
+cmd: deactivate
