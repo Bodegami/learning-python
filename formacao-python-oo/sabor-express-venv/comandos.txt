@@ -12,5 +12,28 @@ cmd: python -m venv exemplo
 cmd: venv\Scripts\activate.bat    - WINDOWS
 terminal: source venv/bin/activate       - MAC
 
+
 3 - Para desativar o ambiente virtual, no terminal executamos um comando:
 cmd: deactivate
+
+
+4 - Para instalar dependencias no projeto, no terminal executamos um comando
+    onde 'pip' representa o gerenciador de pacotes que vamos utilizar,
+    'install' o comando que queremos executar e 'requests' o nome da 
+    lib que queremos instalar:
+cmd: pip install requests    
+
+
+5 - Para desinstalr dependencias dos projeto, no terminal executamos o sehuinte
+    comando:
+cmd: pip uninstall requests    
+
+
+6 - Para listar tudo que temos instalando no modulo do projeto, no terminal 
+    executamos o seguinte comando:
+cmd: pip freeze
+
+
+7 - Para criar um arquivo com todos pacotes do modulo do projeto, no terminal
+    executamos o seguinte comando:
+cmd: pip freeze > requirements.txt
