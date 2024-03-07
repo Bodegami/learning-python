@@ -1,0 +1,6 @@
+# Instalando uma lib
+cmd: pip install nome_lib
+
+# Instalando uma lib com versao especifica
+cmd: pip install nome_lib==x.x.x
+
