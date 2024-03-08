@@ -15,11 +15,8 @@ media_1(nota_1= 3, nota_2= 6, nota_3= 9)
 notas = [8.5, 9.0, 6.0, 10.0]
 def media_2(lista: list):
     calculo = round(sum(lista) / len(lista), ndigits=1)
-    print(calculo)
+    return calculo
 
 resultado = media_2(notas)
 
 print(resultado)
-
-
-
