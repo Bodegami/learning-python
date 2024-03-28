@@ -30,3 +30,18 @@ print(estudantes)
 
 candidatos = [estudante[0] for estudante in estudantes if estudante[1] >= 8]
 print(candidatos)
+
+
+
+# Para fazer o processo contrário, de transformar uma tupla iterável em listas, basta passar o operador asterisco (*) 
+# ao lado esquerdo do nome da tupla iterável que quer extrair os dados, repassando cada tupla para uma variável.
+
+tupla_iteravel = [('J392', 'João'), ('M890', 'Maria'), ('J681', 'José'), ('C325', 'Claúdia'), ('A49', 'Ana')]
+ids, nomes  = zip(*tupla_iteravel)
+
+ids = list(ids)
+nomes = list(nomes)
+
+print("IDs = ", ids)
+print("Nomes = ", nomes)
+
