@@ -16,20 +16,20 @@ def media(lista: list=[0]) -> float:
 
 medias = [round(media(nota), 1) for nota in notas]
 
-print(medias)
+print(f"MEDIAS = {medias}")
 
 nomes = [('João', 'J720'), ('Maria', 'M205'), ('José', 'J371'), ('Cláudia', 'C546'), ('Ana', 'A347')]
 medias = [9.0, 7.3, 5.8, 6.7, 8.5]
 
 nomes = [nome[0] for nome in nomes]
-print(nomes)
+print(f"NOMES = {nomes}")
 
 # O zip recebe duas listas como argumentos e retorna um zip de tuplas
 estudantes = list(zip(nomes, medias))
-print(estudantes)
+print(f"ESTUDANTES = {estudantes}")
 
 candidatos = [estudante[0] for estudante in estudantes if estudante[1] >= 8]
-print(candidatos)
+print(f"CANDIDATOS = {candidatos}")
 
 
 
