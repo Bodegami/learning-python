@@ -27,3 +27,4 @@ Kaliningrad = precos[:,1]
 Petersburg = precos[:,2]
 Krasnodar = precos[:,3]
 Ekaterinburg = precos[:,4]
+
